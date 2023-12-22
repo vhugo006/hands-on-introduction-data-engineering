@@ -1,5 +1,5 @@
 #!/bin/bash
-export AIRFLOW_HOME="/workspaces/hands-on-introduction-data-engineering-4395021/airflow"
+export AIRFLOW_HOME="/workspaces/hands-on-introduction-data-engineering/airflow"
 
 AIRFLOW_VERSION=2.5.1
 PYTHON_VERSION="$(python --version | cut -d " " -f 2 | cut -d "." -f 1-2)"
@@ -16,5 +16,5 @@ sed -i -e '/worker_refresh_interval =/ s/= .*/= 0/' ${AIRFLOW_HOME}/airflow.cfg
 sed -i -e '/workers =/ s/= .*/= 2/' ${AIRFLOW_HOME}/airflow.cfg
 
 airflow users create --username admin --firstname Firstname --lastname Lastname --role Admin --email admin@example.org --password password
-airflow webserver -D
-airflow scheduler -D
+# airflow webserver -D
+# airflow scheduler -D
