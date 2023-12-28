@@ -1,0 +1,16 @@
+# Ignore specific file extensions
+*.cfg
+*.db
+*.err
+*.log
+*.out
+*.pid
+*.txt
+*.csv
+
+# Ignore specific directories
+.idea/
+logs/
+__pycache__/
+
+webserver_config.py
